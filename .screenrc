@@ -1,0 +1,22 @@
+# reset escape key to the default
+escape ^Aa
+# auxiliary register
+register S ^A
+# Alt + x produces ^A and acts as an escape key
+#bindkey "^[x" process S
+# Alt + space produces ^A and acts as an escape key
+#bindkey "^[ " process S
+bindkey "^ " process S
+
+start_message off
+nonblock on
+defutf8 on
+vbell off
+autodetach on
+hardstatus on
+hardstatus alwayslastline "%Lw"
+#caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%H %Y/%m/%d "
+#caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d "
+#hardstatus alwayslastline
+#hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %Y/%m/%d %c:%s "
+#hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d% %s"
